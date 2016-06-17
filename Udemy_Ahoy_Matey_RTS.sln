@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy_Ahoy_Matey_RTS.CSharp.Plugins", "Udemy_Ahoy_Matey_RTS.CSharp.Plugins.csproj", "{554C5FA3-4D5B-9646-079D-5D5297ECACD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy_Ahoy_Matey_RTS.CSharp", "Udemy_Ahoy_Matey_RTS.CSharp.csproj", "{F04F02D0-0031-FEDD-B0D0-9B97CC03CE58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy_Ahoy_Matey_RTS.CSharp.Editor", "Udemy_Ahoy_Matey_RTS.CSharp.Editor.csproj", "{D0EF6D2A-743E-8371-8740-038BF092200F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{554C5FA3-4D5B-9646-079D-5D5297ECACD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554C5FA3-4D5B-9646-079D-5D5297ECACD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554C5FA3-4D5B-9646-079D-5D5297ECACD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554C5FA3-4D5B-9646-079D-5D5297ECACD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04F02D0-0031-FEDD-B0D0-9B97CC03CE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04F02D0-0031-FEDD-B0D0-9B97CC03CE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04F02D0-0031-FEDD-B0D0-9B97CC03CE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04F02D0-0031-FEDD-B0D0-9B97CC03CE58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EF6D2A-743E-8371-8740-038BF092200F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EF6D2A-743E-8371-8740-038BF092200F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EF6D2A-743E-8371-8740-038BF092200F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EF6D2A-743E-8371-8740-038BF092200F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
