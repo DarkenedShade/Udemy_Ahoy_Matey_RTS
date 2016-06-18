@@ -75,9 +75,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Foam.cs" />
-    <Compile Include="Assets\MyNetworkManagerHUD.cs" />
-    <Compile Include="Assets\topSeaOffset.cs" />
+    <Compile Include="Assets\MyNetworkManager.cs" />
+    <Compile Include="Assets\Starter Pack\Foam.cs" />
+    <Compile Include="Assets\Starter Pack\topSeaOffset.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SizeRefrence\triPlanar.shader" />
