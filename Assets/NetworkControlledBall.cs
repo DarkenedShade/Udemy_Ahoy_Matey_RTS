@@ -4,7 +4,8 @@ using UnityStandardAssets.Vehicles.Ball;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.Networking;
 
-public class NetworkControlledBall : NetworkBehaviour {
+public class NetworkControlledBall : NetworkBehaviour
+{
 
     private Ball ball; // Reference to the ball controller.
 
@@ -19,23 +20,24 @@ public class NetworkControlledBall : NetworkBehaviour {
     {
         // Set up the reference.
         ball = GetComponent<Ball>();
-        
+
     }
 
 
     private void Update()
     {
         // Get the axis and jump input.
-        if(isLocalPlayer)
-        {
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
-            jump = CrossPlatformInputManager.GetButton("Jump");
+        if (!isLocalPlayer)
+            return;
 
-            // calculate move direction
-            move = (v * Vector3.forward + h * Vector3.right).normalized;
-        }
-        
+        float h = CrossPlatformInputManager.GetAxis("Horizontal");
+        float v = CrossPlatformInputManager.GetAxis("Vertical");
+        jump = CrossPlatformInputManager.GetButton("Jump");
+
+        // calculate move direction
+        move = (v * Vector3.forward + h * Vector3.right).normalized;
+
+
     }
 
 
