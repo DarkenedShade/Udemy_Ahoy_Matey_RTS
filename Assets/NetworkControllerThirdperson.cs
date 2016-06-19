@@ -14,6 +14,12 @@ public class NetworkControllerThirdperson : NetworkBehaviour
     private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
 
 
+    public override void OnStartLocalPlayer()
+    {
+        base.OnStartLocalPlayer();
+        GetComponentInChildren<Camera>().enabled = true;
+    }
+
     private void Start()
     {
         // get the transform of the main camera
