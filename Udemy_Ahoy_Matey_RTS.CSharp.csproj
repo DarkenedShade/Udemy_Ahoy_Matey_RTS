@@ -77,6 +77,7 @@
   <ItemGroup>
     <Compile Include="Assets\MyNetworkManager.cs" />
     <Compile Include="Assets\NetworkControlledBall.cs" />
+    <Compile Include="Assets\NetworkControllerThirdperson.cs" />
     <Compile Include="Assets\Starter Pack\Foam.cs" />
     <Compile Include="Assets\Starter Pack\topSeaOffset.cs" />
   </ItemGroup>

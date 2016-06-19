@@ -4,14 +4,14 @@ using UnityStandardAssets.Vehicles.Ball;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.Networking;
 
-public class NetworkControlledBall : NetworkBehaviour
-{
+public class NetworkControlledBall : NetworkBehaviour {
 
     private Ball ball; // Reference to the ball controller.
 
     private Vector3 move;
     // the world-relative desired move direction, calculated from the camForward and user input.
 
+    private Transform cam; // A reference to the main camera in the scenes transform
     private Vector3 camForward; // The current forward direction of the camera
     private bool jump; // whether the jump button is currently pressed
 
@@ -20,7 +20,7 @@ public class NetworkControlledBall : NetworkBehaviour
     {
         // Set up the reference.
         ball = GetComponent<Ball>();
-
+        cam = GetComponentInChildren<Camera>().transform;
     }
 
 
@@ -35,9 +35,17 @@ public class NetworkControlledBall : NetworkBehaviour
         jump = CrossPlatformInputManager.GetButton("Jump");
 
         // calculate move direction
-        move = (v * Vector3.forward + h * Vector3.right).normalized;
-
-
+        if (cam != null)
+        {
+            // calculate camera relative direction to move:
+            camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
+            move = (v * camForward + h * cam.right).normalized;
+        }
+        else
+        {
+            // we use world-relative directions in the case of no main camera
+            move = (v * Vector3.forward + h * Vector3.right).normalized;
+        }
     }
 
 
