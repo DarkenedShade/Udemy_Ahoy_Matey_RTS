@@ -8,13 +8,27 @@ public class MyNetworkManager : NetworkManager
     public void MyStartHost()
     {
         base.StartHost();
-        Debug.Log("Starting Host at " + Time.timeSinceLevelLoad);
+        Debug.Log(Time.timeSinceLevelLoad + " Starting Host.");
     }
 
     public override void OnStartHost()
     {
         base.OnStartHost();
 
-        Debug.Log("Host Started at " + Time.timeSinceLevelLoad);
+        Debug.Log(Time.timeSinceLevelLoad + " Host Started.");
+    }
+
+    public override void OnStartClient(NetworkClient startedClient)
+    {
+        base.OnStartClient(startedClient);
+
+        Debug.Log(Time.timeSinceLevelLoad +  " Client start requested.");
+    }
+
+    public override void OnClientConnect(NetworkConnection conn)
+    {
+        base.OnClientConnect(conn);
+
+        Debug.Log(Time.timeSinceLevelLoad + " Client is connected to IP: " + conn.address);
     }
 }
